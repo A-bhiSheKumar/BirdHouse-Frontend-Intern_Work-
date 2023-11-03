@@ -58,7 +58,7 @@ module.exports = withPWA({
       "res.cloudinary.com",
       "lh3.googleusercontent.com",
       "",
-      "images.dashter.com",
+      "images.BirdHouse.com",
     ],
   },
 
