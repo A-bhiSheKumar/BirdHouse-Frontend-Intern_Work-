@@ -89,13 +89,13 @@ const useGetSetting = () => {
     };
 
     // Check if the setting is not in the store and fetch it
-    if (!storeCustomizationSetting) {
+    // if (!storeCustomizationSetting) {
       fetchAndAddSetting();
-    }
+    // }
 
-    if (!globalSetting) {
+    // if (!globalSetting) {
       fetchGlobalSetting();
-    }
+    // }
 
     // Check if the "lang" value is not set and set a default value
     if (!lang) {

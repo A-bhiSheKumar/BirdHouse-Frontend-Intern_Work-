@@ -97,7 +97,7 @@ const storeCustomization = {
       promotion_button_link: "/search?category=breakfast",
 
       feature_title: {
-        en: "Featured Categories",
+        en: "Feature ",
         de: "Beliebte Kategorien",
       },
       feature_description: {
@@ -107,7 +107,7 @@ const storeCustomization = {
       feature_product_limit: "18",
 
       popular_title: {
-        en: "Popular Products for Daily Shopping",
+        en: "Popular Products for ",
         de: "Beliebte Produkte für den täglichen Einkauf",
       },
       popular_description: {

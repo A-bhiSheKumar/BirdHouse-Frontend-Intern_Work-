@@ -43,10 +43,10 @@ const Common = ({ setModalOpen }) => {
           OR
         </div>
 
-        <div className="flex justify-between flex-col lg:flex-row">
-          <button className="text-sm inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-serif text-center justify-center rounded-md focus:outline-none text-gray-600 bg-gray-100 shadow-sm md:px-2 my-1 sm:my-1 md:my-1 lg:my-0 lg:px-3 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-blue-600 h-11 md:h-12 w-full mr-2">
+        <div className="flex justify-center flex-col lg:flex-row">
+          {/* <button className="text-sm inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-serif text-center justify-center rounded-md focus:outline-none text-gray-600 bg-gray-100 shadow-sm md:px-2 my-1 sm:my-1 md:my-1 lg:my-0 lg:px-3 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-blue-600 h-11 md:h-12 w-full mr-2">
             <ImFacebook /> <span className="ml-2">Login With Facebook</span>
-          </button>
+          </button> */}
 
           <GoogleLogin
             // clientId={`${process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}`}
@@ -71,7 +71,7 @@ const Common = ({ setModalOpen }) => {
             {showRegister ? "Already have a account ?" : "Not have a account ?"}
             <button
               onClick={handleModal}
-              className="text-gray-800 hover:text-emerald-500 font-bold mx-2"
+              className="text-gray-800 hover:text-emerald-700 font-bold mx-2"
             >
               {showRegister ? "Login" : "Register"}
             </button>

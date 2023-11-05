@@ -14,7 +14,7 @@ const Register = ({ setShowResetPassword, setModalOpen }) => {
       <div className="text-center mb-6">
         <h2 className="text-3xl font-bold font-serif">Signing Up</h2>
         <p className="text-sm md:text-base text-gray-500 mt-2 mb-8 sm:mb-10">
-          Create an account with email
+          Let's Get You Started Create an Account with Your Email
         </p>
       </div>
       <form
@@ -88,7 +88,7 @@ const Register = ({ setShowResetPassword, setModalOpen }) => {
             <button
               disabled={loading}
               type="submit"
-              className="w-full text-center py-3 rounded bg-emerald-500 text-white hover:bg-emerald-600 transition-all focus:outline-none my-1"
+              className="w-full text-center py-3 rounded bg-emerald-700 text-white hover:bg-emerald-600 transition-all focus:outline-none my-1"
             >
               Register
             </button>
