@@ -11,13 +11,14 @@ const Banner = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center bg-white">
         <div>
           <h1 className="font-serif text-xl">
             <span className="text-emerald-600 font-bold">
-              {showingTranslateValue(
+              {/* {showingTranslateValue(
                 storeCustomizationSetting?.home?.promotion_title
-              )}
+              )} */}
+              100% Authenticate Products
             </span>{" "}
           </h1>
 
@@ -30,7 +31,7 @@ const Banner = () => {
         <Link
           href={`${storeCustomizationSetting?.home?.promotion_button_link}`}
         >
-          <a className="text-sm font-serif font-medium px-6 py-2 bg-emerald-500 text-center rounded-full text-white hover:bg-emerald-700">
+          <a className="text-sm font-serif font-medium px-6 py-2 bg-[#096A00] text-center rounded-full text-white hover:bg-emerald-700">
             {showingTranslateValue(
               storeCustomizationSetting?.home?.promotion_button_name
             )}

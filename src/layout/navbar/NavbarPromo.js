@@ -57,7 +57,7 @@ const NavbarPromo = () => {
 
   return (
     <>
-      <div className="hidden lg:block xl:block bg-white border-b">
+      <div className="hidden lg:block xl:block bg-[#096A00] text-white border-b">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10 h-12 flex justify-between items-center">
           <div className="inline-flex">
             <Popover className="relative">
@@ -70,7 +70,7 @@ const NavbarPromo = () => {
                     {storeCustomizationSetting?.navbar
                       ?.categories_menu_status && (
                       <Popover className="relative font-serif">
-                        <Popover.Button className="group inline-flex items-center py-2 hover:text-emerald-600 focus:outline-none">
+                        <Popover.Button className="group inline-flex transform hover:scale-105 transition duration-300 text-white items-center py-2 hover:text-white focus:outline-none">
                           <span className="font-serif text-sm font-medium">
                             {showingTranslateValue(
                               storeCustomizationSetting?.navbar?.categories
@@ -105,7 +105,7 @@ const NavbarPromo = () => {
                       <Link href="/about-us">
                         <a
                           onClick={() => setIsLoading(!isLoading)}
-                          className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600"
+                          className="font-serif mx-4 py-2 text-sm font-medium transform hover:scale-105 transition duration-300 text-white hover:text-white"
                         >
                           {showingTranslateValue(
                             storeCustomizationSetting?.navbar?.about_us
@@ -118,7 +118,7 @@ const NavbarPromo = () => {
                       <Link href="/contact-us">
                         <a
                           onClick={() => setIsLoading(!isLoading)}
-                          className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600"
+                          className="font-serif text-white mx-4 py-2 text-sm transform hover:scale-105 transition duration-300 font-medium hover:text-white"
                         >
                           {showingTranslateValue(
                             storeCustomizationSetting?.navbar?.contact_us
@@ -128,7 +128,7 @@ const NavbarPromo = () => {
                     )}
 
                     <Popover className="relative font-serif">
-                      <Popover.Button className="group inline-flex items-center py-2 text-sm font-medium hover:text-emerald-600 focus:outline-none">
+                      <Popover.Button className="group inline-flex items-center py-2 text-sm transform hover:scale-105 transition duration-300 text-white font-medium hover:text-white focus:outline-none">
                         <span>
                           {showingTranslateValue(
                             storeCustomizationSetting?.navbar?.pages
@@ -248,13 +248,13 @@ const NavbarPromo = () => {
 
                               {storeCustomizationSetting?.navbar
                                 ?.privacy_policy_status && (
-                                <span className="p-2  font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
+                                <span className="p-2 font-serif items-center rounded-md hover:bg-gray-50 w-full ">
                                   <div className="w-full flex">
                                     <FiPocket className="my-auto" />
                                     <Link href="/privacy-policy">
                                       <a
                                         onClick={() => setIsLoading(!isLoading)}
-                                        className="relative inline-flex items-cente font-serif ml-2 py-0 rounded text-sm font-medium  hover:text-emerald-600"
+                                        className="relative inline-flex items-cente font-serif ml-2 py-0 rounded text-sm font-medium text-white"
                                       >
                                         {showingTranslateValue(
                                           storeCustomizationSetting?.navbar
@@ -274,7 +274,7 @@ const NavbarPromo = () => {
                                     <Link href="/terms-and-conditions">
                                       <a
                                         onClick={() => setIsLoading(!isLoading)}
-                                        className="relative inline-flex items-cente font-serif ml-2 py-0 rounded text-sm font-medium  hover:text-emerald-600"
+                                        className="relative inline-flex items-cente font-serif ml-2 py-0 rounded text-sm font-medium hover:text-emerald-600 "
                                       >
                                         {showingTranslateValue(
                                           storeCustomizationSetting?.navbar
