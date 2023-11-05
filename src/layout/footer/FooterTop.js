@@ -10,97 +10,23 @@ const FooterTop = () => {
   const { storeCustomizationSetting, loading, error } = useGetSetting();
 
   return (
-    <div
-      id="downloadApp"
-      className="bg-indigo-50 py-10 lg:py-16 bg-repeat bg-center overflow-hidden"
-    >
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-2 md:gap-3 lg:gap-3 items-center">
-          <div className="flex-grow hidden lg:flex md:flex md:justify-items-center lg:justify-start">
-            <Image
-              src={
-                storeCustomizationSetting?.home?.daily_need_img_left ||
-                "/app-download-img-left.png"
-              }
-              alt="app download"
-              width={500}
-              height={394}
-              className="block w-auto"
-            />
-          </div>
-          <div className="text-center">
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold font-serif mb-3">
-              <CMSkeleton
-                count={1}
-                height={30}
-                // error={error}
-                loading={loading}
-                data={storeCustomizationSetting?.home?.daily_need_title}
-              />
-            </h3>
-            <p className="text-base opacity-90 leading-7">
-              <CMSkeleton
-                count={5}
-                height={10}
-                error={error}
-                loading={loading}
-                data={storeCustomizationSetting?.home?.daily_need_description}
-              />
-            </p>
-            <div className="mt-8">
-              <Link
-                href={`${storeCustomizationSetting?.home?.daily_need_app_link}`}
-              >
-                <a className="mx-2" target="_blank" rel="noreferrer">
-                  <Image
-                    width={170}
-                    height={50}
-                    className="mr-2 rounded"
-                    src={
-                      storeCustomizationSetting?.home?.button1_img ||
-                      "/app/app-store.svg"
-                    }
-                    alt="app store"
-                  />
-                </a>
-              </Link>
-              <Link
-                href={`${storeCustomizationSetting?.home?.daily_need_google_link}`}
-              >
-                <a target="_blank" rel="noreferrer">
-                  {
-                    <Image
-                      width={170}
-                      height={50}
-                      src={
-                        storeCustomizationSetting?.home?.button2_img ||
-                        "/app/play-store.svg"
-                      }
-                      alt=""
-                      className="block w-auto object-contain"
-                    />
-                  }
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div className="md:hidden lg:block">
-            <div className="flex-grow hidden lg:flex md:flex lg:justify-end">
-              <Image
-                src={
-                  storeCustomizationSetting?.home?.daily_need_img_right ||
-                  "/app-download-img.png"
-                }
-                width={500}
-                height={394}
-                alt="app download"
-                className="block w-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+    <section>
+  <div className="bg-[#096A00] text-white py-8 px-10 relative">
+    <h2 className="font-inter md:text-2xl lg:text-3xl mb-4 pl-3">
+      We offer discounts for bulk purchases
+    </h2>
+    <p className="text-base md:text lg:text-sm mb-4 pl-3 font-inter">
+      Call us for a quote or advice on <strong>1234567890</strong> or{' '}
+      <strong>1234567890</strong> Or email admin@nexting.com
+    </p>
+    <div className="absolute top-0 right-0 mt-[55px] mr-20">
+      <button className="bg-white py-2 px-6 text-black rounded-full hover:bg-gray-200">
+        Contact Us
+      </button>
     </div>
+  </div>
+</section>
+
   );
 };
 

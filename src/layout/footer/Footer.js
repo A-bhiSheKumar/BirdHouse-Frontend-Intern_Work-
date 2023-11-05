@@ -31,6 +31,7 @@ const Footer = () => {
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-10">
         <div className="grid grid-cols-2 md:grid-cols-7 xl:grid-cols-12 gap-5 sm:gap-9 lg:gap-11 xl:gap-7 py-10 lg:py-16 justify-between">
           {storeCustomizationSetting?.footer?.block1_status && (
+            
             <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
               <h3 className="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
                 <CMSkeleton
@@ -119,6 +120,7 @@ const Footer = () => {
               </ul>
             </div>
           )}
+
           {storeCustomizationSetting?.footer?.block2_status && (
             <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
               <h3 className="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
@@ -203,6 +205,7 @@ const Footer = () => {
               </ul>
             </div>
           )}
+
           {storeCustomizationSetting?.footer?.block3_status && (
             <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
               <h3 className="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
@@ -302,6 +305,7 @@ const Footer = () => {
               </ul>
             </div>
           )}
+          
           {storeCustomizationSetting?.footer?.block4_status && (
             <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
               <Link href="/">
@@ -345,138 +349,8 @@ const Footer = () => {
 
         <hr className="hr-line"></hr>
 
-        <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 bg-gray-50 shadow-sm border border-gray-50 rounded-lg">
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-5 sm:gap-9 lg:gap-11 xl:gap-7 py-8 items-center justify-between">
-            <div className="col-span-1">
-              {storeCustomizationSetting?.footer?.social_links_status && (
-                <div>
-                  {(storeCustomizationSetting?.footer?.social_facebook ||
-                    storeCustomizationSetting?.footer?.social_twitter ||
-                    storeCustomizationSetting?.footer?.social_pinterest ||
-                    storeCustomizationSetting?.footer?.social_linkedin ||
-                    storeCustomizationSetting?.footer?.social_whatsapp) && (
-                    <span className="text-base leading-7 font-medium block mb-2 pb-0.5">
-                      {t("common:footer-follow-us")}
-                    </span>
-                  )}
-                  <ul className="text-sm flex">
-                    {storeCustomizationSetting?.footer?.social_facebook && (
-                      <li className="flex items-center mr-3 transition ease-in-out duration-500">
-                        <Link
-                          href={`${storeCustomizationSetting?.footer?.social_facebook}`}
-                        >
-                          <a
-                            aria-label="Social Link"
-                            rel="noreferrer"
-                            target="_blank"
-                            className="block text-center mx-auto text-gray-500 hover:text-white"
-                          >
-                            <FacebookIcon size={34} round />
-                          </a>
-                        </Link>
-                      </li>
-                    )}
-                    {storeCustomizationSetting?.footer?.social_twitter && (
-                      <li className="flex items-center  mr-3 transition ease-in-out duration-500">
-                        <Link
-                          href={`${storeCustomizationSetting?.footer?.social_twitter}`}
-                        >
-                          <a
-                            aria-label="Social Link"
-                            rel="noreferrer"
-                            target="_blank"
-                            className="block text-center mx-auto text-gray-500 hover:text-white"
-                          >
-                            <TwitterIcon size={34} round />
-                          </a>
-                        </Link>
-                      </li>
-                    )}
-                    {storeCustomizationSetting?.footer?.social_pinterest && (
-                      <li className="flex items-center mr-3 transition ease-in-out duration-500">
-                        <Link
-                          href={`${storeCustomizationSetting?.footer?.social_pinterest}`}
-                        >
-                          <a
-                            aria-label="Social Link"
-                            rel="noreferrer"
-                            target="_blank"
-                            className="block text-center mx-auto text-gray-500 hover:text-white"
-                          >
-                            <PinterestIcon size={34} round />
-                          </a>
-                        </Link>
-                      </li>
-                    )}
-                    {storeCustomizationSetting?.footer?.social_linkedin && (
-                      <li className="flex items-center  mr-3 transition ease-in-out duration-500">
-                        <Link
-                          href={`${storeCustomizationSetting?.footer?.social_linkedin}`}
-                        >
-                          <a
-                            aria-label="Social Link"
-                            rel="noreferrer"
-                            target="_blank"
-                            className="block text-center mx-auto text-gray-500 hover:text-white"
-                          >
-                            <LinkedinIcon size={34} round />
-                          </a>
-                        </Link>
-                      </li>
-                    )}
-                    {storeCustomizationSetting?.footer?.social_whatsapp && (
-                      <li className="flex items-center  mr-3 transition ease-in-out duration-500">
-                        <Link
-                          href={`${storeCustomizationSetting?.footer?.social_whatsapp}`}
-                        >
-                          <a
-                            aria-label="Social Link"
-                            rel="noreferrer"
-                            target="_blank"
-                            className="block text-center mx-auto text-gray-500 hover:text-white"
-                          >
-                            <WhatsappIcon size={34} round />
-                          </a>
-                        </Link>
-                      </li>
-                    )}
-                  </ul>
-                </div>
-              )}
-            </div>
-            <div className="col-span-1 text-center hidden lg:block md:block">
-              {storeCustomizationSetting?.footer?.bottom_contact_status && (
-                <div>
-                  <p className="text-base leading-7 font-medium block">
-                    {t("common:footer-call-us")}
-                  </p>
-                  <h5 className="text-2xl font-bold text-emerald-500 leading-7">
-                    {/* +012345-67900 */}
-                    {storeCustomizationSetting?.footer?.bottom_contact}
-                  </h5>
-                </div>
-              )}
-            </div>
-            {storeCustomizationSetting?.footer?.payment_method_status && (
-              <div className="col-span-1 hidden lg:block md:block">
-                <ul className="lg:text-right">
-                  <li className="px-1 mb-2 md:mb-0 transition hover:opacity-80 inline-flex">
-                    <Image
-                      width={274}
-                      height={85}
-                      className="w-full"
-                      src={
-                        storeCustomizationSetting?.footer?.payment_method_img ||
-                        "/payment-method/payment-logo.png"
-                      }
-                      alt="payment method"
-                    />
-                  </li>
-                </ul>
-              </div>
-            )}
-          </div>
-        </div>
+        
+         
       </div>
 
       <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 flex justify-center py-4">

@@ -17,6 +17,7 @@ import MainCarousel from "@component/carousel/MainCarousel";
 import FeatureCategory from "@component/category/FeatureCategory";
 import AttributeServices from "@services/AttributeServices";
 import CMSkeleton from "@component/preloader/CMSkeleton";
+import Image from "next/image";
 
 const Home = ({ popularProducts, discountProducts, attributes }) => {
   const router = useRouter();
@@ -59,6 +60,9 @@ const Home = ({ popularProducts, discountProducts, attributes }) => {
               </div>
             </div>
 
+          
+
+
             {/* feature category's */}
 
             <div className="bg-gray-100 lg:py-16 py-10">
@@ -66,10 +70,11 @@ const Home = ({ popularProducts, discountProducts, attributes }) => {
                 <div className="mb-10 flex justify-center">
                   <div className="text-center w-full lg:w-2/5">
                     <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
-                      Feature Items
+                      Featured Categories
                     </h2>
                     <p className="text-base font-sans text-gray-600 leading-6">
-                      All good items
+                      Chose your necessary products from the featured
+                      categories.
                     </p>
                   </div>
                 </div>
@@ -78,9 +83,16 @@ const Home = ({ popularProducts, discountProducts, attributes }) => {
               </div>
             </div>
 
+          {/* Image  */}
+
+            <div className="justify-center ">
+              <img src="/assets/images/bird.png" alt="bird" width={1728} height={554} />
+            </div>
+
+
             {/* popular products */}
 
-            <div className="bg-gray-50 lg:py-16 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
+            {/* <div className="bg-gray-50 lg:py-16 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
               <div className="mb-10 flex justify-center">
                 <div className="text-center w-full lg:w-2/5">
                   <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
@@ -118,10 +130,10 @@ const Home = ({ popularProducts, discountProducts, attributes }) => {
                   )}
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* promotional banner card */}
-            {storeCustomizationSetting?.home?.delivery_status && (
+            {/* {storeCustomizationSetting?.home?.delivery_status && (
               <div className="block mx-auto max-w-screen-2xl">
                 <div className="mx-auto max-w-screen-2xl px-4 sm:px-10">
                   <div className="lg:p-16 p-6 bg-emerald-500 shadow-sm border rounded-lg">
@@ -129,7 +141,7 @@ const Home = ({ popularProducts, discountProducts, attributes }) => {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
 
             {/* discounted products */}
             {storeCustomizationSetting?.home?.discount_product_status && (
@@ -140,27 +152,10 @@ const Home = ({ popularProducts, discountProducts, attributes }) => {
                 <div className="mb-10 flex justify-center">
                   <div className="text-center w-full lg:w-2/5">
                     <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
-                      <CMSkeleton
-                        count={1}
-                        height={30}
-                        // error={error}
-                        loading={loading}
-                        data={
-                          storeCustomizationSetting?.home?.latest_discount_title
-                        }
-                      />
+                      Most Popular Boxes
                     </h2>
                     <p className="text-base font-sans text-gray-600 leading-6">
-                      <CMSkeleton
-                        count={5}
-                        height={20}
-                        // error={error}
-                        loading={loading}
-                        data={
-                          storeCustomizationSetting?.home
-                            ?.latest_discount_description
-                        }
-                      />
+                    See all our popular products in this week. You can choose your daily needs products from this list and get some special offer with free shipping.
                     </p>
                   </div>
                 </div>

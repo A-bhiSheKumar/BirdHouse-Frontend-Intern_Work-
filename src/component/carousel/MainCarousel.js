@@ -31,9 +31,7 @@ const MainCarousel = () => {
         storeCustomizationSetting?.slider?.first_button
       ),
       url: showingUrl(storeCustomizationSetting?.slider?.first_link),
-      image:
-        showingImage(storeCustomizationSetting?.slider?.first_img) ||
-        "/slider/slider-1.jpg",
+      image:"/assets/images/nestbird.png",
     },
     {
       id: 2,
@@ -47,9 +45,7 @@ const MainCarousel = () => {
         storeCustomizationSetting?.slider?.second_button
       ),
       url: showingUrl(storeCustomizationSetting?.slider?.second_link),
-      image:
-        showingImage(storeCustomizationSetting?.slider?.second_img) ||
-        "/slider/slider-2.jpg",
+      image:"/assets/images/bird.png",
     },
   
 
